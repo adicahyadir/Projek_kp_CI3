@@ -17,6 +17,17 @@
 
 	<!-- Custom styles for this template-->
 	<link href="<?=base_url('assets/');?>css/sb-admin-2.min.css" rel="stylesheet">
+	<style type="text/css">
+		
+		.sidebar li .submenu{ 
+			list-style: none; 
+			margin: 0; 
+			padding: 0; 
+			padding-left: 1rem; 
+			padding-right: 1rem;
+		}
+
+	</style>
 
 </head>
 
@@ -33,7 +44,7 @@
 				<div class="sidebar-brand-icon rotate-n-15">
 					<i class="fas fa-laugh-wink"></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">Tes Aplikasi</div>
+				<div class="sidebar-brand-text mx-3">Perpustakaan</div>
 			</a>
 
 			<!-- Divider -->
@@ -43,7 +54,7 @@
 			<li class="nav-item">
 				<a class="nav-link" href="<?=base_url('dashboard');?>">
 					<i class="fas fa-fw fa-tachometer-alt"></i>
-					<span>Dashboard</span></a>
+					<span>Halaman Utama</span></a>
 			</li>
 
 			<!-- Divider -->
@@ -94,7 +105,7 @@
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
 									<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-									Logout
+									Keluar
 								</a>
 							</div>
 						</li>
@@ -108,6 +119,6 @@
 				<div class="container-fluid">
 
 					<!-- Page Heading -->
-					<h1 class="h3 mb-4 text-gray-800">Blank Page</h1>
+					<h1 class="h3 mb-4 text-gray-800">Blank Page !</h1>
 
 				<?php $this->load->view('template/footer'); ?>

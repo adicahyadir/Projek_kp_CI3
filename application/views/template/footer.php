@@ -8,7 +8,7 @@
 			<footer class="sticky-footer bg-white">
 				<div class="container my-auto">
 					<div class="copyright text-center my-auto">
-						<span>Copyright &copy; Tes Aplikasi 2021</span>
+						<span>Copyright &copy; MTs Sa Miftahul Falah 2021</span>
 					</div>
 				</div>
 			</footer>
@@ -30,15 +30,15 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel">Yakin Untuk keluar?</h5>
+					<h5 class="modal-title" id="exampleModalLabel">Anda Yakin Keluar?</h5>
 					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">×</span>
 					</button>
 				</div>
-				<div class="modal-body">Ini Modal Logout.</div>
+				<div class="modal-body">Keluar dari aplikasi</div>
 				<div class="modal-footer">
-					<button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-					<a class="btn btn-primary" href="<?=base_url('logout');?>">Logout</a>
+					<button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+					<a class="btn btn-primary" href="<?=base_url('logout');?>">Keluar</a>
 				</div>
 			</div>
 		</div>
@@ -53,6 +53,38 @@
 
 	<!-- Custom scripts for all pages-->
 	<script src="<?=base_url('assets/');?>js/sb-admin-2.min.js"></script>
+
+	<script type="text/javascript">
+		
+		document.addEventListener("DOMContentLoaded", function(){
+		  document.querySelectorAll('.sidebar .nav-link').forEach(function(element){
+		    
+		    element.addEventListener('click', function (e) {
+
+		      let nextEl = element.nextElementSibling;
+		      let parentEl  = element.parentElement;	
+
+		        if(nextEl) {
+		            e.preventDefault();	
+		            let mycollapse = new bootstrap.Collapse(nextEl);
+		            
+		            if(nextEl.classList.contains('show')){
+		              mycollapse.hide();
+		            } else {
+		                mycollapse.show();
+		                // find other submenus with class=show
+		                var opened_submenu = parentEl.parentElement.querySelector('.submenu.show');
+		                // if it exists, then close all of them
+		                if(opened_submenu){
+		                  new bootstrap.Collapse(opened_submenu);
+		                }
+		            }
+		        }
+		    }); // addEventListener
+		  }) // forEach
+		}); 
+		// DOMContentLoaded  end
+	</script>
 
 </body>
 
