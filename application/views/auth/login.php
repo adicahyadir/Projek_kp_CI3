@@ -68,6 +68,11 @@
 									<div class="text-center">
 										<a class="small" href="<?= base_url('register'); ?>">Membuat akun</a>
 									</div> -->
+									<div class="container my-auto">
+										<div class="copyright text-center my-auto">
+											<span>Copyright &copy; MTs Sa Miftahul Falah 2021</span>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
